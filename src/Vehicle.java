@@ -1,10 +1,18 @@
 public class Vehicle {
 
+    //Constructor
+
+    Vehicle(){
+
+    }
+
+    //Attributes
     String model;
     int mileage;
 
-    public void printinformation(){
-        System.out.println("Model: " +this.model + "Mileage: " + this.mileage);
+    //Methods
+    public void printInformation(){
+        System.out.println("Model: " + this.model + "Mileage: " + this.mileage);
     }
 
 }

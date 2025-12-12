@@ -1,5 +1,6 @@
 public class Main00 {
 
+    //main
     static void main(String[] args) {
         Car car = new Car();
         car.model = "VW Golf";
@@ -9,7 +10,7 @@ public class Main00 {
         motorcycle.mileage = 9876;
         motorcycle.isPillionRiderCapable = true;
 
-        car.printinformation();
-        motorcycle.printinformation();
+        car.printInformation();
+        motorcycle.printInformation();
     }
 }

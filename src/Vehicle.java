@@ -1,9 +1,9 @@
 public class Vehicle {
 
     //Constructor
-
-    Vehicle(){
-
+    Vehicle(String model, int mileage){
+        this.model = model;
+        this.mileage = mileage;
     }
 
     //Attributes
@@ -12,7 +12,7 @@ public class Vehicle {
 
     //Methods
     public void printInformation(){
-        System.out.println("Model: " + this.model + "Mileage: " + this.mileage);
+        System.out.println("Model: " + this.model + " Mileage: " + this.mileage);
     }
 
 }

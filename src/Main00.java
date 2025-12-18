@@ -13,19 +13,27 @@ public class Main00 {
         Car car = new Car("VW Golf", 42617);
         Motorcycle motorcycle = new Motorcycle("Simson Schwalbe", 9876, true);
 
-//        car.printInformation();
-//        motorcycle.printInformation();
+        car.printInformation();
+        motorcycle.printInformation();
 
-        printVehicleInformation(car);
-        printVehicleInformation(motorcycle);
+//        printVehicleInformation(car);
+//        printVehicleInformation(motorcycle);
+
     }
 
-    static void printVehicleInformation(Vehicle vehicle){
+
+    static void printVehicleInformation(Vehicle vehicle) {
         //TODO
-        if(vehicle instanceof Motorcycle){
+        if (vehicle instanceof Motorcycle) {
             System.out.println("Motorrad - soziustauglich: " + ((Motorcycle) vehicle).isPillionRiderCapable);
-        } else{
+        } else {
             System.out.println("Fahrzeug - Kilometerleistung: " + vehicle.mileage);
         }
     }
+
+    @Override
+    public String toString(){
+        return "";
+    }
 }
+

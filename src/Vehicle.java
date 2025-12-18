@@ -12,6 +12,7 @@ public class Vehicle {
 
     //Methods
     public void printInformation(){
+
         System.out.println("Model: " + this.model + " Mileage: " + this.mileage);
     }
 

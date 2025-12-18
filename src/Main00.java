@@ -13,8 +13,9 @@ public class Main00 {
         Car car = new Car("VW Golf", 42617);
         Motorcycle motorcycle = new Motorcycle("Simson Schwalbe", 9876, true);
 
-        car.printInformation();
-        motorcycle.printInformation();
+//        car.printInformation();
+//        motorcycle.printInformation();
+
         printVehicleInformation(car);
         printVehicleInformation(motorcycle);
     }
@@ -22,7 +23,7 @@ public class Main00 {
     static void printVehicleInformation(Vehicle vehicle){
         //TODO
         if(vehicle instanceof Motorcycle){
-            System.out.println("Motorad - soziustauglich: " + ((Motorcycle) vehicle).isPillionRiderCapable);
+            System.out.println("Motorrad - soziustauglich: " + ((Motorcycle) vehicle).isPillionRiderCapable);
         } else{
             System.out.println("Fahrzeug - Kilometerleistung: " + vehicle.mileage);
         }

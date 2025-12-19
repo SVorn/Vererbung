@@ -13,11 +13,14 @@ public class Main00 {
         Car car = new Car("VW Golf", 42617);
         Motorcycle motorcycle = new Motorcycle("Simson Schwalbe", 9876, true);
 
-        car.printInformation();
-        motorcycle.printInformation();
+//        car.printInformation();
+//        motorcycle.printInformation();
 
 //        printVehicleInformation(car);
 //        printVehicleInformation(motorcycle);
+
+        System.out.println(car);
+        System.out.println(motorcycle);
 
     }
 
@@ -31,9 +34,5 @@ public class Main00 {
         }
     }
 
-    @Override
-    public String toString(){
-        return "";
-    }
 }
 

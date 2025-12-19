@@ -12,8 +12,12 @@ public class Vehicle {
 
     //Methods
     public void printInformation(){
-
         System.out.println("Model: " + this.model + " Mileage: " + this.mileage);
+    }
+
+    @Override
+    public String toString(){
+        return "Model: " + this.model + " Mileage: " + this.mileage;
     }
 
 }

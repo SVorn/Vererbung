@@ -1,0 +1,4 @@
+interface Startable {
+
+    void start();
+}

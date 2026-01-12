@@ -1,12 +1,12 @@
-public class Motorcycle extends Vehicle{
+public class Motorcycle extends Vehicle implements Refuelable{
 
     //Attributes
     Boolean isPillionRiderCapable;
 
 
     //Constructor is accessing constructor of vehicle superclass
-    Motorcycle(String model, int mileage, Boolean isPillionRiderCapable){
-        super(model, mileage);
+    Motorcycle(String model, int mileage, int tank, Boolean isPillionRiderCapable){
+        super(model, mileage, tank);
         this.isPillionRiderCapable = isPillionRiderCapable;
     }
 
@@ -19,6 +19,12 @@ public class Motorcycle extends Vehicle{
     @Override
     public void start(){
         System.out.println("prött prött prött");
+    }
+
+    @Override
+    public void refuel(int liters){
+        tank += liters;
+        System.out.println("Tank: " + tank);
     }
 
 }

@@ -10,8 +10,9 @@ public class Main00 {
 //        motorcycle.mileage = 9876;
 //        motorcycle.isPillionRiderCapable = true;
 
-        Car car = new Car("VW Golf", 42617);
-        Motorcycle motorcycle = new Motorcycle("Simson Schwalbe", 9876, true);
+        Car car = new Car("VW Golf", 42617, 50);
+        Motorcycle motorcycle = new Motorcycle("Simson Schwalbe", 9876, 10, true);
+        Console console = new Console();
 
 //        car.printInformation();
 //        motorcycle.printInformation();
@@ -24,6 +25,9 @@ public class Main00 {
 
         car.start();
         motorcycle.start();
+        console.start();
+        car.refuel(10);
+        motorcycle.refuel(10);
 
     }
 

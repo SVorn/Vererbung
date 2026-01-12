@@ -1,18 +1,24 @@
-public abstract class Vehicle {
+public abstract class Vehicle implements Startable {
 
     //Constructor
-    Vehicle(String model, int mileage){
+    Vehicle(String model, int mileage, int tank){
         this.model = model;
         this.mileage = mileage;
+        this.tank = tank;
     }
 
     //Attributes
     String model;
     int mileage;
+    int tank;
 
     //Methods
+    @Override
+    public void start() {
 
-    public abstract void start();
+    }
+
+
 
     public void printInformation(){
         System.out.println("Model: " + this.model + " Mileage: " + this.mileage);

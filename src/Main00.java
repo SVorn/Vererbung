@@ -22,6 +22,9 @@ public class Main00 {
         System.out.println(car);
         System.out.println(motorcycle);
 
+        car.start();
+        motorcycle.start();
+
     }
 
 

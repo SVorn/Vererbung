@@ -5,4 +5,9 @@ public class Car extends Vehicle{
 
         super(model, mileage);
     }
+
+    @Override
+    public void start(){
+        System.out.println("wroom");
+    }
 }

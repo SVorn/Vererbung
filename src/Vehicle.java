@@ -1,4 +1,4 @@
-public class Vehicle {
+public abstract class Vehicle {
 
     //Constructor
     Vehicle(String model, int mileage){
@@ -11,6 +11,9 @@ public class Vehicle {
     int mileage;
 
     //Methods
+
+    public abstract void start();
+
     public void printInformation(){
         System.out.println("Model: " + this.model + " Mileage: " + this.mileage);
     }

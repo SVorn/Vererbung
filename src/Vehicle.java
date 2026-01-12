@@ -1,4 +1,4 @@
-public abstract class Vehicle implements Startable {
+public abstract class Vehicle implements Startable{
 
     //Constructor
     Vehicle(String model, int mileage, int tank){

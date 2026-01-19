@@ -26,8 +26,8 @@ public class Main00 {
         car.start();
         motorcycle.start();
         console.start();
-        car.refuel(10);
-        motorcycle.refuel(10);
+        car.refuel(10, car);
+        motorcycle.refuel(10, motorcycle);
 
     }
 
@@ -35,9 +35,9 @@ public class Main00 {
     static void printVehicleInformation(Vehicle vehicle) {
         //TODO
         if (vehicle instanceof Motorcycle) {
-            System.out.println("Motorrad - soziustauglich: " + ((Motorcycle) vehicle).isPillionRiderCapable);
+            System.out.println("Motorrad - soziustauglich: " + ((Motorcycle) vehicle).getPillionRiderCapable());
         } else {
-            System.out.println("Fahrzeug - Kilometerleistung: " + vehicle.mileage);
+            System.out.println("Fahrzeug - Kilometerleistung: " + vehicle.getMileage());
         }
     }
 

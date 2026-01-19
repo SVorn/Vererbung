@@ -1,7 +1,7 @@
 public class Motorcycle extends Vehicle implements Refuelable{
 
     //Attributes
-    Boolean isPillionRiderCapable;
+    private Boolean isPillionRiderCapable;
 
 
     //Constructor is accessing constructor of vehicle superclass
@@ -10,10 +10,17 @@ public class Motorcycle extends Vehicle implements Refuelable{
         this.isPillionRiderCapable = isPillionRiderCapable;
     }
 
+    public void setPillionRiderCapable(Boolean pillionRiderCapable) {
+        isPillionRiderCapable = pillionRiderCapable;
+    }
+
+    public Boolean getPillionRiderCapable() {
+        return isPillionRiderCapable;
+    }
 
     @Override
     public void printInformation() {
-        System.out.println(this.model + " " + "(" + this.mileage + ") - " + "soziustauglich: " + this.isPillionRiderCapable);
+        System.out.println(this.getModel() + " " + "(" + this.getMileage() + ") - " + "soziustauglich: " + this.isPillionRiderCapable);
     }
 
     @Override
@@ -22,9 +29,9 @@ public class Motorcycle extends Vehicle implements Refuelable{
     }
 
     @Override
-    public void refuel(int liters){
-        tank += liters;
-        System.out.println("Tank: " + tank);
+    public void refuel(int liters, Vehicle vehicle){
+        vehicle.setTank(liters);
+        System.out.println("Tank: " + getTank());
     }
 
 }

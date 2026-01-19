@@ -1,5 +1,5 @@
 public interface Refuelable {
 
-    void refuel(int liters);
+    void refuel(int liters, Vehicle vehicle);
 
 }

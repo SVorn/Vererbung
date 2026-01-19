@@ -12,8 +12,8 @@ public class Car extends Vehicle implements Refuelable{
     }
 
     @Override
-    public void refuel(int liters){
-        tank += liters;
-        System.out.println("Tank: " + tank);
+    public void refuel(int liters, Vehicle vehicle){
+        vehicle.setTank(liters);
+        System.out.println("Tank: " + getTank());
     }
 }

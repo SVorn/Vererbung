@@ -21,6 +21,9 @@ public abstract class Vehicle implements Startable{
     }
 
     public void setMileage(int mileage) {
+        if(mileage < 0){
+            throw new IllegalArgumentException("ungültige mileage Angabe: " + mileage);
+        }
         this.mileage = mileage;
     }
 
@@ -28,9 +31,13 @@ public abstract class Vehicle implements Startable{
         return this.mileage;
     }
 
-    public void setModel(String model){
+    public void setModel(String model) {
+        if(model == null || model.length() == 0){
+            throw new IllegalArgumentException("ungültiges model: " + model);
+        }
         this.model = model;
     }
+
     public String getModel(){
         return this.model;
     }

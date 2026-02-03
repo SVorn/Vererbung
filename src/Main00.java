@@ -20,14 +20,17 @@ public class Main00 {
 //        printVehicleInformation(car);
 //        printVehicleInformation(motorcycle);
 
-        System.out.println(car);
-        System.out.println(motorcycle);
+//        System.out.println(car);
+//        System.out.println(motorcycle);
+//
+//        car.start();
+//        motorcycle.start();
+//        console.start();
+//        car.refuel(10, car);
+//        motorcycle.refuel(10, motorcycle);
 
-        car.start();
-        motorcycle.start();
-        console.start();
-        car.refuel(10, car);
-        motorcycle.refuel(10, motorcycle);
+//        car.setModel("");
+        car.setMileage(-1);
 
     }
 

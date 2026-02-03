@@ -1,7 +1,7 @@
 public class Main00 {
 
     //main
-    static void main(String[] args) {
+    static void main(String[] args) throws GarageException{
 //        Car car = new Car();
 //        car.model = "VW Golf";
 //        car.mileage = 42617;
@@ -13,6 +13,7 @@ public class Main00 {
         Car car = new Car("VW Golf", 42617, 50);
         Motorcycle motorcycle = new Motorcycle("Simson Schwalbe", 9876, 10, true);
         Console console = new Console();
+        Garage garage = new Garage();
 
 //        car.printInformation();
 //        motorcycle.printInformation();
@@ -30,7 +31,8 @@ public class Main00 {
 //        motorcycle.refuel(10, motorcycle);
 
 //        car.setModel("");
-        car.setMileage(-1);
+//        car.setMileage(-1);
+        garage.replaceEngine(car, -1, "VW Golf");
 
     }
 

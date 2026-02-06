@@ -1,3 +1,6 @@
+import java.util.ArrayList;
+import java.util.Iterator;
+
 public class Main00 {
 
     //main
@@ -32,8 +35,13 @@ public class Main00 {
 
 //        car.setModel("");
 //        car.setMileage(-1);
-        garage.replaceEngine(car, -1, "VW Golf");
-
+//        garage.replaceEngine(car, -1, "VW Golf");
+//        ArrayList<Vehicle> vehicleList = new ArrayList<>();
+//        vehicleList.add(car);
+//        vehicleList.add(motorcycle);
+//        Vehicle.printVehicles(vehicleList);
+        ArrayList<Vehicle> vlist = Vehicle.gatherVehicles(5,3);
+        Vehicle.printVehicles(vlist);
     }
 
 
@@ -45,6 +53,16 @@ public class Main00 {
             System.out.println("Fahrzeug - Kilometerleistung: " + vehicle.getMileage());
         }
     }
+
+//    static void printVehicles(ArrayList<Vehicle> vehicles){
+//        System.out.println("Fahrzeuge: " + vehicles.size());
+//        Iterator<Vehicle> iterator = vehicles.iterator();
+//
+//        while(iterator.hasNext()){
+//            Vehicle vehicle = iterator.next();
+//            System.out.println(vehicle);
+//        }
+//    }
 
 }
 

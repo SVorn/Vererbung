@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.List;
 import java.util.Random;
 import java.util.random.RandomGenerator;
 
@@ -77,7 +78,7 @@ public abstract class Vehicle implements Startable{
 
         for (int i = 1; i <= numberOfCars; i++){
             String model = "Auto #" + i;
-            int mileage = RandomGenerator.getDefault().nextInt(0, 20000);
+            int mileage = RandomGenerator.getDefault().nextInt(0, 200000);
             int tank = 0;
             Car car = new Car(model, mileage, tank);
             listOfVehicles.add(car);
@@ -95,6 +96,31 @@ public abstract class Vehicle implements Startable{
         }
 
         return listOfVehicles;
+    }
+
+    static void decommissionOldVehicles(ArrayList<Vehicle> vehicles){
+
+        Iterator<Vehicle> iterator = vehicles.iterator();
+        while(iterator.hasNext()){
+            Vehicle vehicle = iterator.next();
+            if (vehicle.getMileage() >= 150000){
+                System.out.println("Das Vehicle wird zerstört: " + vehicle.getModel());
+            }
+        }
+    }
+
+    static void relabelVehicles(List<Vehicle> vehicles, List<String> models) throws IllegalArgumentException{
+        if (vehicles == null || models == null || vehicles.size() != models.size()){
+            throw new IllegalArgumentException ("Fehler, Null oder unterschiedliche Listengrößen");
+            }
+
+        Iterator<Vehicle> iterator = vehicles.iterator();
+        Iterator<String> iterator2 = models.iterator();
+        while(iterator.hasNext()){
+            String model = iterator2.next();
+            Vehicle vehicle = iterator.next();
+            vehicle.setModel(model);
+        }
     }
 
 }

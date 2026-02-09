@@ -19,8 +19,8 @@ public class Motorcycle extends Vehicle implements Refuelable{
     }
 
     @Override
-    public void printInformation() {
-        System.out.println(this.getModel() + " " + "(" + this.getMileage() + ") - " + "soziustauglich: " + this.isPillionRiderCapable);
+    public String toString() {
+        return "Model: " + this.getModel() + " " + "Mileage: " + this.getMileage() + " - " + "soziustauglich: " + this.isPillionRiderCapable;
     }
 
     @Override

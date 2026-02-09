@@ -1,5 +1,8 @@
+import java.lang.reflect.Array;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Iterator;
+import java.util.List;
 
 public class Main00 {
 
@@ -40,7 +43,11 @@ public class Main00 {
 //        vehicleList.add(car);
 //        vehicleList.add(motorcycle);
 //        Vehicle.printVehicles(vehicleList);
-        ArrayList<Vehicle> vlist = Vehicle.gatherVehicles(5,3);
+        ArrayList<Vehicle> vlist = Vehicle.gatherVehicles(2,0);
+        Vehicle.printVehicles(vlist);
+        Vehicle.decommissionOldVehicles(vlist);
+        List<String> modelList = Arrays.asList("Lightning McQueen","Hook");
+        Vehicle.relabelVehicles(vlist, modelList);
         Vehicle.printVehicles(vlist);
     }
 
